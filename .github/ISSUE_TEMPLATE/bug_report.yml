@@ -6,38 +6,20 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a problem. forceInstaller's **Report a problem** link fills in the versions and the system for you.
-        Please leave out license keys, license request strings and customer data: issues here are public.
-  - type: input
-    id: app-version
+        Thanks for reporting a problem. Please leave out license keys, license request strings and customer data: issues here are public.
+  - type: textarea
+    id: environment
     attributes:
-      label: App version
-      description: The version on the app's card in forceInstaller (for forceInstaller itself, the version in its Settings).
-      placeholder: "1.4.0"
-    validations:
-      required: true
-  - type: input
-    id: launcher-version
-    attributes:
-      label: forceInstaller version
-      description: Shown at the top of forceInstaller's Settings. Write "not used" if you installed the app another way.
-      placeholder: "0.16.1"
-    validations:
-      required: true
-  - type: input
-    id: os
-    attributes:
-      label: Operating system
-      description: Name and version, for example Windows 11 24H2 or Ubuntu 24.04.
-      placeholder: "Windows 11 24H2"
-    validations:
-      required: true
-  - type: input
-    id: arch
-    attributes:
-      label: Architecture
-      description: x64, ARM64, x86 or RISC-V ("I don't know" is fine).
-      placeholder: "x64"
+      label: Versions and system
+      description: |
+        forceInstaller's **Report a problem** copied these lines to your clipboard: paste them here, and add your operating system's version (for example Windows 11 24H2 or Ubuntu 24.04).
+        Otherwise give the app version (on its card in forceInstaller), the forceInstaller version (top of its Settings, or "not used"), the operating system with its version, and the architecture (x64, ARM64, x86 or RISC-V).
+      placeholder: |
+        App: forceVector 1.4.0
+        forceInstaller: 0.16.1
+        Operating system: Windows 11 24H2
+        Architecture: x64
+      render: text
     validations:
       required: true
   - type: textarea
